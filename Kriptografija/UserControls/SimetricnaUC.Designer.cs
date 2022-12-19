@@ -71,7 +71,7 @@
             // 
             this.richTextBoxPlainText.Location = new System.Drawing.Point(18, 154);
             this.richTextBoxPlainText.Name = "richTextBoxPlainText";
-            this.richTextBoxPlainText.Size = new System.Drawing.Size(740, 455);
+            this.richTextBoxPlainText.Size = new System.Drawing.Size(904, 455);
             this.richTextBoxPlainText.TabIndex = 4;
             this.richTextBoxPlainText.Text = "Text to encrypt...";
             // 
@@ -97,7 +97,7 @@
             // 
             // buttonReadFromFile
             // 
-            this.buttonReadFromFile.Location = new System.Drawing.Point(650, 108);
+            this.buttonReadFromFile.Location = new System.Drawing.Point(814, 108);
             this.buttonReadFromFile.Name = "buttonReadFromFile";
             this.buttonReadFromFile.Size = new System.Drawing.Size(108, 40);
             this.buttonReadFromFile.TabIndex = 7;
@@ -111,9 +111,9 @@
             // 
             // buttonGetHash
             // 
-            this.buttonGetHash.Location = new System.Drawing.Point(817, 108);
+            this.buttonGetHash.Location = new System.Drawing.Point(18, 39);
             this.buttonGetHash.Name = "buttonGetHash";
-            this.buttonGetHash.Size = new System.Drawing.Size(402, 40);
+            this.buttonGetHash.Size = new System.Drawing.Size(336, 40);
             this.buttonGetHash.TabIndex = 8;
             this.buttonGetHash.Text = "Get hash";
             this.buttonGetHash.UseVisualStyleBackColor = true;
@@ -122,9 +122,9 @@
             // textBoxHash
             // 
             this.textBoxHash.Enabled = false;
-            this.textBoxHash.Location = new System.Drawing.Point(817, 167);
+            this.textBoxHash.Location = new System.Drawing.Point(534, 50);
             this.textBoxHash.Name = "textBoxHash";
-            this.textBoxHash.Size = new System.Drawing.Size(402, 20);
+            this.textBoxHash.Size = new System.Drawing.Size(388, 20);
             this.textBoxHash.TabIndex = 9;
             // 
             // SimetricnaUC
@@ -140,7 +140,7 @@
             this.Controls.Add(this.buttonEncyrpt);
             this.Controls.Add(this.label1);
             this.Name = "SimetricnaUC";
-            this.Size = new System.Drawing.Size(1182, 648);
+            this.Size = new System.Drawing.Size(1012, 648);
             this.ResumeLayout(false);
             this.PerformLayout();
 

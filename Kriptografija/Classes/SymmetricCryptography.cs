@@ -10,7 +10,8 @@ namespace Kriptografija.Classes
 {
     public static class SymmetricCryptography
     {
-
+        public static byte[] Key = Convert.FromBase64String(FileManager.GetKeyAES());
+        public static byte[] IV = Convert.FromBase64String(FileManager.GetIVAES());
         public static void CreateKeyAndIvAES()
         {
             using (Aes myAes = Aes.Create())
@@ -23,9 +24,6 @@ namespace Kriptografija.Classes
         }
         public static byte[] EncryptStringToBytes_Aes(string textToEncrypt)
         {
-            byte[] Key = Convert.FromBase64String(FileManager.GetKeyAES());
-            byte[] IV = Convert.FromBase64String(FileManager.GetIVAES());
-
             if (textToEncrypt == null || textToEncrypt.Length <= 0)
                 throw new ArgumentNullException("Problem u tekstu");
             if (Key == null || Key.Length <= 0)
@@ -64,9 +62,6 @@ namespace Kriptografija.Classes
         }
         public static string DecryptStringFromBytes_Aes(byte[] cipherText)
         {
-            byte[] Key = Convert.FromBase64String(FileManager.GetKeyAES());
-            byte[] IV = Convert.FromBase64String(FileManager.GetIVAES());
-
             if (cipherText == null || cipherText.Length <= 0)
                 throw new ArgumentNullException("cipherText");
             if (Key == null || Key.Length <= 0)
@@ -103,7 +98,6 @@ namespace Kriptografija.Classes
                     }
                 }
             }
-
             return plaintext;
         }
     }
