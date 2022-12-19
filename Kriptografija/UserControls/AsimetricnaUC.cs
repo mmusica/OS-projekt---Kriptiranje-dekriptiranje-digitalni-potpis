@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Kriptografija.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,11 @@ namespace Kriptografija.UserControls
         public AsimetricnaUC()
         {
             InitializeComponent();
+        }
+
+        private void buttonGetHash_Click(object sender, EventArgs e)
+        {
+            textBoxHash.Text = Hash.GetHash(richTextBoxPlainText.Text);
         }
     }
 }
