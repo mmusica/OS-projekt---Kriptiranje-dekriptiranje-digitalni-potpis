@@ -24,11 +24,22 @@ namespace Kriptografija.UserControls
         {
             byte[] encryptedText = SymmetricCryptography.EncryptStringToBytes_Aes(richTextBoxPlainText.Text);
             richTextBoxPlainText.Text = Convert.ToBase64String(encryptedText);
+            buttonGenerateKey.Enabled = false;
         }
 
         private void buttonDecrypt_Click(object sender, EventArgs e)
         {
-            richTextBoxPlainText.Text = SymmetricCryptography.DecryptStringFromBytes_Aes(Convert.FromBase64String(richTextBoxPlainText.Text));
+            try
+            {
+                richTextBoxPlainText.Text = SymmetricCryptography.DecryptStringFromBytes_Aes(Convert.FromBase64String(richTextBoxPlainText.Text));
+            }
+            catch (Exception)
+            {
+                buttonGenerateKey.Enabled = true;
+                MessageBox.Show("Tekst je do kraja dekriptiran");
+              
+            }
+           
 
         }
 
