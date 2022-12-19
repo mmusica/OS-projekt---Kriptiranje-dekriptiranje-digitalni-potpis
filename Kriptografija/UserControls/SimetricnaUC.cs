@@ -55,5 +55,10 @@ namespace Kriptografija.UserControls
                 richTextBoxPlainText.Text = FileManager.ReadFromFile(openFileDialog1.FileName);
             }
         }
+
+        private void buttonGetHash_Click(object sender, EventArgs e)
+        {
+            textBoxHash.Text = Hash.GetHash(richTextBoxPlainText.Text);
+        }
     }
 }

@@ -38,6 +38,8 @@
             this.buttonGenerateKey = new System.Windows.Forms.Button();
             this.buttonReadFromFile = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.buttonGetHash = new System.Windows.Forms.Button();
+            this.textBoxHash = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -107,10 +109,30 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // buttonGetHash
+            // 
+            this.buttonGetHash.Location = new System.Drawing.Point(817, 108);
+            this.buttonGetHash.Name = "buttonGetHash";
+            this.buttonGetHash.Size = new System.Drawing.Size(402, 40);
+            this.buttonGetHash.TabIndex = 8;
+            this.buttonGetHash.Text = "Get hash";
+            this.buttonGetHash.UseVisualStyleBackColor = true;
+            this.buttonGetHash.Click += new System.EventHandler(this.buttonGetHash_Click);
+            // 
+            // textBoxHash
+            // 
+            this.textBoxHash.Enabled = false;
+            this.textBoxHash.Location = new System.Drawing.Point(817, 167);
+            this.textBoxHash.Name = "textBoxHash";
+            this.textBoxHash.Size = new System.Drawing.Size(402, 20);
+            this.textBoxHash.TabIndex = 9;
+            // 
             // SimetricnaUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.textBoxHash);
+            this.Controls.Add(this.buttonGetHash);
             this.Controls.Add(this.buttonReadFromFile);
             this.Controls.Add(this.buttonGenerateKey);
             this.Controls.Add(this.buttonDecrypt);
@@ -135,5 +157,7 @@
         private System.Windows.Forms.Button buttonGenerateKey;
         private System.Windows.Forms.Button buttonReadFromFile;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button buttonGetHash;
+        private System.Windows.Forms.TextBox textBoxHash;
     }
 }

@@ -50,12 +50,8 @@
             this.splitContainer1.Panel1.Controls.Add(this.buttonPotpis);
             this.splitContainer1.Panel1.Controls.Add(this.buttonAsimetricna);
             this.splitContainer1.Panel1.Controls.Add(this.buttonSimetricna);
-            // 
-            // splitContainer1.Panel2
-            // 
-            
-            this.splitContainer1.Size = new System.Drawing.Size(1182, 648);
-            this.splitContainer1.SplitterDistance = 185;
+            this.splitContainer1.Size = new System.Drawing.Size(1475, 657);
+            this.splitContainer1.SplitterDistance = 230;
             this.splitContainer1.TabIndex = 0;
             // 
             // buttonPotpis
@@ -95,7 +91,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1182, 648);
+            this.ClientSize = new System.Drawing.Size(1475, 657);
             this.Controls.Add(this.splitContainer1);
             this.Name = "KriptoForm";
             this.Text = "Kriptografija";

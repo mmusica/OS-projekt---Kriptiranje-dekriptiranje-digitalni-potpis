@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\FileManager.cs" />
+    <Compile Include="Classes\Hash.cs" />
     <Compile Include="Classes\SymmetricCryptography.cs" />
     <Compile Include="KriptoForm.cs">
       <SubType>Form</SubType>
