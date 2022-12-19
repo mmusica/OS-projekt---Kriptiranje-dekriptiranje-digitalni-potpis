@@ -1,0 +1,1 @@
+Tekst koji cemo sad kriptirat ucitan iz datoteke

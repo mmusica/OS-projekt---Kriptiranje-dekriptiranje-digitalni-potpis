@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.buttonSimetricna = new System.Windows.Forms.Button();
-            this.buttonAsimetricna = new System.Windows.Forms.Button();
             this.buttonPotpis = new System.Windows.Forms.Button();
+            this.buttonAsimetricna = new System.Windows.Forms.Button();
+            this.buttonSimetricna = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -50,31 +50,13 @@
             this.splitContainer1.Panel1.Controls.Add(this.buttonPotpis);
             this.splitContainer1.Panel1.Controls.Add(this.buttonAsimetricna);
             this.splitContainer1.Panel1.Controls.Add(this.buttonSimetricna);
+            // 
+            // splitContainer1.Panel2
+            // 
+            
             this.splitContainer1.Size = new System.Drawing.Size(1182, 648);
             this.splitContainer1.SplitterDistance = 185;
             this.splitContainer1.TabIndex = 0;
-            // 
-            // buttonSimetricna
-            // 
-            this.buttonSimetricna.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonSimetricna.Location = new System.Drawing.Point(3, 89);
-            this.buttonSimetricna.Name = "buttonSimetricna";
-            this.buttonSimetricna.Size = new System.Drawing.Size(179, 89);
-            this.buttonSimetricna.TabIndex = 0;
-            this.buttonSimetricna.Text = "Simetrična kriptografija";
-            this.buttonSimetricna.UseVisualStyleBackColor = true;
-            this.buttonSimetricna.Click += new System.EventHandler(this.buttonSimetricna_Click);
-            // 
-            // buttonAsimetricna
-            // 
-            this.buttonAsimetricna.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonAsimetricna.Location = new System.Drawing.Point(3, 204);
-            this.buttonAsimetricna.Name = "buttonAsimetricna";
-            this.buttonAsimetricna.Size = new System.Drawing.Size(179, 89);
-            this.buttonAsimetricna.TabIndex = 1;
-            this.buttonAsimetricna.Text = "Asimetrična kriptografija";
-            this.buttonAsimetricna.UseVisualStyleBackColor = true;
-            this.buttonAsimetricna.Click += new System.EventHandler(this.buttonAsimetricna_Click);
             // 
             // buttonPotpis
             // 
@@ -87,13 +69,35 @@
             this.buttonPotpis.UseVisualStyleBackColor = true;
             this.buttonPotpis.Click += new System.EventHandler(this.buttonPotpis_Click);
             // 
-            // kriptoForm
+            // buttonAsimetricna
+            // 
+            this.buttonAsimetricna.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonAsimetricna.Location = new System.Drawing.Point(3, 204);
+            this.buttonAsimetricna.Name = "buttonAsimetricna";
+            this.buttonAsimetricna.Size = new System.Drawing.Size(179, 89);
+            this.buttonAsimetricna.TabIndex = 1;
+            this.buttonAsimetricna.Text = "Asimetrična kriptografija";
+            this.buttonAsimetricna.UseVisualStyleBackColor = true;
+            this.buttonAsimetricna.Click += new System.EventHandler(this.buttonAsimetricna_Click);
+            // 
+            // buttonSimetricna
+            // 
+            this.buttonSimetricna.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonSimetricna.Location = new System.Drawing.Point(3, 89);
+            this.buttonSimetricna.Name = "buttonSimetricna";
+            this.buttonSimetricna.Size = new System.Drawing.Size(179, 89);
+            this.buttonSimetricna.TabIndex = 0;
+            this.buttonSimetricna.Text = "Simetrična kriptografija";
+            this.buttonSimetricna.UseVisualStyleBackColor = true;
+            this.buttonSimetricna.Click += new System.EventHandler(this.buttonSimetricna_Click);
+            // 
+            // KriptoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1182, 648);
             this.Controls.Add(this.splitContainer1);
-            this.Name = "kriptoForm";
+            this.Name = "KriptoForm";
             this.Text = "Kriptografija";
             this.Load += new System.EventHandler(this.kriptoForm_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);

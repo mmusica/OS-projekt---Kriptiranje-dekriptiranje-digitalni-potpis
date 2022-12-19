@@ -1,9 +1,11 @@
 ﻿using Kriptografija.Classes;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,7 +22,27 @@ namespace Kriptografija.UserControls
 
         private void buttonEncyrpt_Click(object sender, EventArgs e)
         {
-            FileManager.WriteText("Test");
+            byte[] encryptedText = SymmetricCryptography.EncryptStringToBytes_Aes(richTextBoxPlainText.Text);
+            richTextBoxPlainText.Text = Convert.ToBase64String(encryptedText);
+        }
+
+        private void buttonDecrypt_Click(object sender, EventArgs e)
+        {
+            richTextBoxPlainText.Text = SymmetricCryptography.DecryptStringFromBytes_Aes(Convert.FromBase64String(richTextBoxPlainText.Text));
+
+        }
+
+        private void buttonGenerateKey_Click(object sender, EventArgs e)
+        {
+            SymmetricCryptography.CreateKeyAndIvAES();
+        }
+
+        private void buttonReadFromFile_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                richTextBoxPlainText.Text = FileManager.ReadFromFile(openFileDialog1.FileName);
+            }
         }
     }
 }

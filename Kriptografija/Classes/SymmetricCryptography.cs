@@ -8,24 +8,24 @@ using System.Security.Cryptography;
 
 namespace Kriptografija.Classes
 {
-    public class SymmetricCryptography
+    public static class SymmetricCryptography
     {
-        public void EncryptAES(string original)
+
+        public static void CreateKeyAndIvAES()
         {
             using (Aes myAes = Aes.Create())
             {
-               
-                byte[] encrypted = EncryptStringToBytes_Aes(original, myAes.Key, myAes.IV);
+                string key = Convert.ToBase64String(myAes.Key);
+                string IV = Convert.ToBase64String(myAes.IV);
+                string writeToFile = key + "!seperate!" + IV;
+                FileManager.WriteTextAES(writeToFile);
             }
         }
-        public void DecryptAES(string original)
+        public static byte[] EncryptStringToBytes_Aes(string textToEncrypt)
         {
-            //TODO file read parameters
-            //return roundtrip = DecryptStringFromBytes_Aes(encrypted, myAes.Key, myAes.IV);
-        }
-        static byte[] EncryptStringToBytes_Aes(string textToEncrypt, byte[] Key, byte[] IV)
-        {
-            
+            byte[] Key = Convert.FromBase64String(FileManager.GetKeyAES());
+            byte[] IV = Convert.FromBase64String(FileManager.GetIVAES());
+
             if (textToEncrypt == null || textToEncrypt.Length <= 0)
                 throw new ArgumentNullException("Problem u tekstu");
             if (Key == null || Key.Length <= 0)
@@ -40,7 +40,7 @@ namespace Kriptografija.Classes
             {
                 symAesAlgorithm.Key = Key;
                 symAesAlgorithm.IV = IV;
-
+               
                 // Create an encryptor to perform the stream transform.
                 ICryptoTransform encryptor = symAesAlgorithm.CreateEncryptor(symAesAlgorithm.Key, symAesAlgorithm.IV);
 
@@ -62,9 +62,11 @@ namespace Kriptografija.Classes
             // Return the encrypted bytes from the memory stream.
             return encrypted;
         }
-        static string DecryptStringFromBytes_Aes(byte[] cipherText, byte[] Key, byte[] IV)
+        public static string DecryptStringFromBytes_Aes(byte[] cipherText)
         {
-            // Check arguments.
+            byte[] Key = Convert.FromBase64String(FileManager.GetKeyAES());
+            byte[] IV = Convert.FromBase64String(FileManager.GetIVAES());
+
             if (cipherText == null || cipherText.Length <= 0)
                 throw new ArgumentNullException("cipherText");
             if (Key == null || Key.Length <= 0)
