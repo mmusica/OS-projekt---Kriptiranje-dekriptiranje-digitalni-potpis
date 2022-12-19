@@ -48,5 +48,6 @@ namespace Kriptografija
             splitContainer1.Panel2.Controls.Add(userControl);
             userControl.BringToFront();
         }
+
     }
 }
