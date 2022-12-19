@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\FileManager.cs" />
+    <Compile Include="Classes\SymmetricCryptography.cs" />
     <Compile Include="KriptoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,7 +109,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Classes\" />
     <Folder Include="Datoteke\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

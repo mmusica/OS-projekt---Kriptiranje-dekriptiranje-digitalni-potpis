@@ -30,6 +30,7 @@
         {
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonEncyrpt = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -42,10 +43,21 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Simetrična kriptografija - AES";
             // 
+            // buttonEncyrpt
+            // 
+            this.buttonEncyrpt.Location = new System.Drawing.Point(538, 201);
+            this.buttonEncyrpt.Name = "buttonEncyrpt";
+            this.buttonEncyrpt.Size = new System.Drawing.Size(75, 23);
+            this.buttonEncyrpt.TabIndex = 1;
+            this.buttonEncyrpt.Text = "Encrypt";
+            this.buttonEncyrpt.UseVisualStyleBackColor = true;
+            this.buttonEncyrpt.Click += new System.EventHandler(this.buttonEncyrpt_Click);
+            // 
             // SimetricnaUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.buttonEncyrpt);
             this.Controls.Add(this.label1);
             this.Name = "SimetricnaUC";
             this.Size = new System.Drawing.Size(1182, 648);
@@ -58,5 +70,6 @@
 
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonEncyrpt;
     }
 }
