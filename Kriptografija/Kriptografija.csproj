@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\AsymmetricCryptography.cs" />
     <Compile Include="Classes\FileManager.cs" />
     <Compile Include="Classes\Hash.cs" />
     <Compile Include="Classes\SymmetricCryptography.cs" />
@@ -111,7 +112,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="Datoteke\tajni_kljuc.txt" />
+    <Content Include="Datoteke\javni_kljuc.txt" />
+    <Content Include="Datoteke\plain_text.txt" />
+    <Content Include="Datoteke\privatni_kljuc.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

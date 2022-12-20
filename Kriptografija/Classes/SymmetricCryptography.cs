@@ -10,16 +10,18 @@ namespace Kriptografija.Classes
 {
     public static class SymmetricCryptography
     {
-        public static byte[] Key = Convert.FromBase64String(FileManager.GetKeyAES());
-        public static byte[] IV = Convert.FromBase64String(FileManager.GetIVAES());
+        public static byte[] Key;
+        public static byte[] IV;
         public static void CreateKeyAndIvAES()
         {
             using (Aes myAes = Aes.Create())
             {
                 string key = Convert.ToBase64String(myAes.Key);
-                string IV = Convert.ToBase64String(myAes.IV);
-                string writeToFile = key + "!seperate!" + IV;
+                string iv = Convert.ToBase64String(myAes.IV);
+                string writeToFile = key + "!seperate!" + iv;
                 FileManager.WriteTextAES(writeToFile);
+                Key = Convert.FromBase64String(FileManager.GetKeyAES());
+                IV = Convert.FromBase64String(FileManager.GetIVAES());
             }
         }
         public static byte[] EncryptStringToBytes_Aes(string textToEncrypt)
