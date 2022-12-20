@@ -36,11 +36,8 @@ namespace Kriptografija.UserControls
             catch (Exception)
             {
                 buttonGenerateKey.Enabled = true;
-                MessageBox.Show("Tekst je do kraja dekriptiran");
-              
+                MessageBox.Show("Tekst je do kraja dekriptiran"); 
             }
-           
-
         }
 
         private void buttonGenerateKey_Click(object sender, EventArgs e)

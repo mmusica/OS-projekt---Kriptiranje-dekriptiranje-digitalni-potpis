@@ -36,6 +36,7 @@
             this.buttonDecrypt = new System.Windows.Forms.Button();
             this.richTextBoxPlainText = new System.Windows.Forms.RichTextBox();
             this.buttonEncyrpt = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // label1
@@ -74,6 +75,7 @@
             this.buttonReadFromFile.TabIndex = 14;
             this.buttonReadFromFile.Text = "Read from file";
             this.buttonReadFromFile.UseVisualStyleBackColor = true;
+            this.buttonReadFromFile.Click += new System.EventHandler(this.buttonReadFromFile_Click);
             // 
             // buttonGenerateKeyPair
             // 
@@ -83,6 +85,7 @@
             this.buttonGenerateKeyPair.TabIndex = 13;
             this.buttonGenerateKeyPair.Text = "Generate key pair";
             this.buttonGenerateKeyPair.UseVisualStyleBackColor = true;
+            this.buttonGenerateKeyPair.Click += new System.EventHandler(this.buttonGenerateKeyPair_Click);
             // 
             // buttonDecrypt
             // 
@@ -92,6 +95,7 @@
             this.buttonDecrypt.TabIndex = 12;
             this.buttonDecrypt.Text = "Decrypt";
             this.buttonDecrypt.UseVisualStyleBackColor = true;
+            this.buttonDecrypt.Click += new System.EventHandler(this.buttonDecrypt_Click);
             // 
             // richTextBoxPlainText
             // 
@@ -109,6 +113,11 @@
             this.buttonEncyrpt.TabIndex = 10;
             this.buttonEncyrpt.Text = "Encrypt";
             this.buttonEncyrpt.UseVisualStyleBackColor = true;
+            this.buttonEncyrpt.Click += new System.EventHandler(this.buttonEncyrpt_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // AsimetricnaUC
             // 
@@ -139,5 +148,6 @@
         private System.Windows.Forms.Button buttonDecrypt;
         private System.Windows.Forms.RichTextBox richTextBoxPlainText;
         private System.Windows.Forms.Button buttonEncyrpt;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
