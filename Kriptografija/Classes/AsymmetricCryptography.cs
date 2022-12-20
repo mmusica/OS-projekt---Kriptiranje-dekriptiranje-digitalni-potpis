@@ -88,7 +88,6 @@ namespace Kriptografija.Classes
             catch (Exception)
             {
                 System.Windows.Forms.MessageBox.Show("Text cannot be further decrypted");
-
             }
             return "";
         }
