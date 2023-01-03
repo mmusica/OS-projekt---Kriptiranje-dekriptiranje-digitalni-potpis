@@ -61,5 +61,10 @@ namespace Kriptografija.UserControls
             textBoxHash.Text = Hash.GetHash(richTextBoxPlainText.Text);
             FileManager.WriteHash(textBoxHash.Text);
         }
+
+        private void SimetricnaUC_Load(object sender, EventArgs e)
+        {
+            richTextBoxPlainText.Text = FileManager.ReadDefaultText();
+        }
     }
 }

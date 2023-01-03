@@ -141,6 +141,7 @@
             this.Controls.Add(this.label1);
             this.Name = "SimetricnaUC";
             this.Size = new System.Drawing.Size(1012, 648);
+            this.Load += new System.EventHandler(this.SimetricnaUC_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

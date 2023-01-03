@@ -113,12 +113,14 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Datoteke\aes_decrypted_text.txt" />
     <Content Include="Datoteke\aes_encrypted_text.txt" />
     <Content Include="Datoteke\default_text.txt" />
     <Content Include="Datoteke\hash.txt" />
     <Content Include="Datoteke\javni_kljuc.txt" />
     <Content Include="Datoteke\plain_text.txt" />
     <Content Include="Datoteke\privatni_kljuc.txt" />
+    <Content Include="Datoteke\rsa_decrypted_text.txt" />
     <Content Include="Datoteke\rsa_encrypted_text.txt" />
     <Content Include="Datoteke\signed_hash.txt" />
     <Content Include="Datoteke\tajni_kljuc.txt" />
