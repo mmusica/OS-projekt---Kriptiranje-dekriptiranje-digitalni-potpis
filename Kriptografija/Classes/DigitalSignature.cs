@@ -47,7 +47,17 @@ namespace Kriptografija.Classes
 
         public static string VerifySignature()
         {
-            signedHash = Convert.FromBase64String(ReturnSignedHashString());
+            try
+            {
+                signedHash = Convert.FromBase64String(ReturnSignedHashString());
+            }
+            catch (Exception ex)
+            {
+
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+            
+            
             using (RSA rsa = RSA.Create())
             {
                 rsa.ImportParameters(AsymmetricCryptography.GetPublicKey());

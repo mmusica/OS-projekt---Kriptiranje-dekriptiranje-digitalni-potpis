@@ -115,6 +115,7 @@
   <ItemGroup>
     <Content Include="Datoteke\aes_encrypted_text.txt" />
     <Content Include="Datoteke\default_text.txt" />
+    <Content Include="Datoteke\hash.txt" />
     <Content Include="Datoteke\javni_kljuc.txt" />
     <Content Include="Datoteke\plain_text.txt" />
     <Content Include="Datoteke\privatni_kljuc.txt" />

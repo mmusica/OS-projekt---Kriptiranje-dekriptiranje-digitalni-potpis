@@ -33,12 +33,14 @@ namespace Kriptografija.UserControls
             try
             {
                 richTextBoxPlainText.Text = SymmetricCryptography.DecryptStringFromBytes_Aes(Convert.FromBase64String(richTextBoxPlainText.Text));
+
             }
             catch (Exception)
             {
                 buttonGenerateKey.Enabled = true;
                 MessageBox.Show("Tekst je do kraja dekriptiran"); 
             }
+            FileManager.WriteAESDecryptedText(richTextBoxPlainText.Text);
         }
 
         private void buttonGenerateKey_Click(object sender, EventArgs e)

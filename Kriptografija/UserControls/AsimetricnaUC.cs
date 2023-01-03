@@ -39,6 +39,7 @@ namespace Kriptografija.UserControls
         private void buttonDecrypt_Click(object sender, EventArgs e)
         {
             richTextBoxPlainText.Text = AsymmetricCryptography.RSADecrypt(richTextBoxPlainText.Text);
+            FileManager.WriteRSADecryptedText(richTextBoxPlainText.Text);
         }
 
         private void buttonReadFromFile_Click(object sender, EventArgs e)
