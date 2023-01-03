@@ -22,5 +22,9 @@ namespace Kriptografija.Classes
                 return builder.ToString();
             }
         }
+        public SHA256 GetSha256()
+        {
+            return SHA256.Create();
+        }
     }
 }

@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\AsymmetricCryptography.cs" />
+    <Compile Include="Classes\DigitalSignature.cs" />
     <Compile Include="Classes\FileManager.cs" />
     <Compile Include="Classes\Hash.cs" />
     <Compile Include="Classes\SymmetricCryptography.cs" />

@@ -52,7 +52,7 @@ namespace Kriptografija.Classes
             var cryptoServiceProvider = new RSACryptoServiceProvider();
             cryptoServiceProvider.ImportParameters(GetPublicKey());
             var bytesPlainTextData = Encoding.Unicode.GetBytes(plainTextData);
-            //apply pkcs#1.5 padding and encrypt our data 
+           
             try
             {
                 var bytesCypherText = cryptoServiceProvider.Encrypt(bytesPlainTextData, false);
