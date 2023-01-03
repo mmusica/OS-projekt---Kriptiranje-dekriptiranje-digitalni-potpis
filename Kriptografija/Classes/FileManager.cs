@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Kriptografija.Classes
 {
@@ -13,6 +14,7 @@ namespace Kriptografija.Classes
         private static string pathAES = "../../Datoteke/tajni_kljuc.txt";
         private static string pathRSAPublic = "../../Datoteke/javni_kljuc.txt";
         private static string pathRSAPrivate = "../../Datoteke/privatni_kljuc.txt";
+        private static string pathSignedHash = "../../Datoteke/signed_hash.txt";
 
         public static void WriteTextAES(string text)
         {
@@ -62,6 +64,15 @@ namespace Kriptografija.Classes
         public static string ReadPrivateKeyRSA()
         {
             return File.ReadAllText(pathRSAPrivate);
+        }
+
+        public static void WriteSignedHash(string signedHash)
+        {
+            File.WriteAllText(pathSignedHash, signedHash);
+        }
+        public static string ReadSignedHash()
+        {
+            return File.ReadAllText(pathSignedHash);
         }
     }
 }

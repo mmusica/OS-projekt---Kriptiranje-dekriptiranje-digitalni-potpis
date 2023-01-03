@@ -46,5 +46,15 @@ namespace Kriptografija.UserControls
                 richTextBoxPlainText.Text = FileManager.ReadFromFile(openFileDialog1.FileName);
             }
         }
+
+        private void richTextBoxPlainText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AsimetricnaUC_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
