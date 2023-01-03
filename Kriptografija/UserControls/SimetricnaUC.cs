@@ -57,6 +57,7 @@ namespace Kriptografija.UserControls
         private void buttonGetHash_Click(object sender, EventArgs e)
         {
             textBoxHash.Text = Hash.GetHash(richTextBoxPlainText.Text);
+            FileManager.WriteHash(textBoxHash.Text);
         }
     }
 }
