@@ -15,7 +15,9 @@ namespace Kriptografija.Classes
         private static string pathRSAPublic = "../../Datoteke/javni_kljuc.txt";
         private static string pathRSAPrivate = "../../Datoteke/privatni_kljuc.txt";
         private static string pathSignedHash = "../../Datoteke/signed_hash.txt";
-
+        private static string pathDefaultText = "../../Datoteke/default_text.txt";
+        private static string pathRSAEncryptedText = "../../Datoteke/rsa_encrypted_text.txt";
+        private static string pathAESEncryptedText = "../../Datoteke/aes_encrypted_text.txt";
         public static void WriteTextAES(string text)
         {
             File.WriteAllText(pathAES, text);
@@ -73,6 +75,23 @@ namespace Kriptografija.Classes
         public static string ReadSignedHash()
         {
             return File.ReadAllText(pathSignedHash);
+        }
+
+        public static void WriteDefaultText(string text)
+        {
+            File.WriteAllText(pathDefaultText, text);
+        }
+        public static string ReadDefaultText()
+        {
+            return File.ReadAllText(pathDefaultText);
+        }
+        public static void WriteRSAEncryptedText(string text)
+        {
+            File.WriteAllText(pathRSAEncryptedText, text);
+        }
+        public static void WriteAESEncryptedText(string text)
+        {
+            File.WriteAllText(pathAESEncryptedText, text);
         }
     }
 }

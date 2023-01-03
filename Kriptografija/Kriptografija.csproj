@@ -113,6 +113,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Datoteke\default_text.txt" />
     <Content Include="Datoteke\javni_kljuc.txt" />
     <Content Include="Datoteke\plain_text.txt" />
     <Content Include="Datoteke\privatni_kljuc.txt" />

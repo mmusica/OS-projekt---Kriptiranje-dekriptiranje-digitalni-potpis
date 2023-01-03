@@ -55,6 +55,7 @@
             this.richTextBoxInput.Size = new System.Drawing.Size(455, 376);
             this.richTextBoxInput.TabIndex = 1;
             this.richTextBoxInput.Text = "Text to add signature to";
+            this.richTextBoxInput.TextChanged += new System.EventHandler(this.richTextBoxInput_TextChanged);
             // 
             // richTextBoxSignedHash
             // 

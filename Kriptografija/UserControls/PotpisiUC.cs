@@ -17,6 +17,7 @@ namespace Kriptografija.UserControls
         public PotpisiUC()
         {
             InitializeComponent();
+            richTextBoxInput.Text = FileManager.ReadDefaultText();
         }
 
         private void buttonLoadFromFile_Click(object sender, EventArgs e)
@@ -32,8 +33,6 @@ namespace Kriptografija.UserControls
             DigitalSignature.InputDataToSignAndHash(richTextBoxInput.Text);
             DigitalSignature.CreateSignature();
             richTextBoxSignedHash.Text = DigitalSignature.ReturnSignedHashString();
-
-
         }
 
         private void buttonCheckSignature_Click(object sender, EventArgs e)
@@ -44,6 +43,12 @@ namespace Kriptografija.UserControls
         private void richTextBoxSignedHash_TextChanged(object sender, EventArgs e)
         {
             FileManager.WriteSignedHash(richTextBoxSignedHash.Text);
+        }
+
+        private void richTextBoxInput_TextChanged(object sender, EventArgs e)
+        {
+            FileManager.WriteDefaultText(richTextBoxInput.Text);
+            DigitalSignature.InputDataToSignAndHash(richTextBoxInput.Text);
         }
     }
 }

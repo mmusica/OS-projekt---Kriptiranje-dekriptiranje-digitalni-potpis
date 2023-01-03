@@ -32,6 +32,7 @@ namespace Kriptografija.UserControls
         private void buttonEncyrpt_Click(object sender, EventArgs e)
         {
             richTextBoxPlainText.Text = AsymmetricCryptography.RSAEncrypt(richTextBoxPlainText.Text);
+            FileManager.WriteRSAEncryptedText(richTextBoxPlainText.Text);
         }
 
         private void buttonDecrypt_Click(object sender, EventArgs e)
@@ -54,7 +55,7 @@ namespace Kriptografija.UserControls
 
         private void AsimetricnaUC_Load(object sender, EventArgs e)
         {
-
+            richTextBoxPlainText.Text = FileManager.ReadDefaultText();
         }
     }
 }
