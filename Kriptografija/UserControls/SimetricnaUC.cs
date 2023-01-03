@@ -25,6 +25,7 @@ namespace Kriptografija.UserControls
             byte[] encryptedText = SymmetricCryptography.EncryptStringToBytes_Aes(richTextBoxPlainText.Text);
             richTextBoxPlainText.Text = Convert.ToBase64String(encryptedText);
             buttonGenerateKey.Enabled = false;
+            FileManager.WriteAESEncryptedText(richTextBoxPlainText.Text);
         }
 
         private void buttonDecrypt_Click(object sender, EventArgs e)
