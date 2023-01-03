@@ -20,13 +20,13 @@ namespace Kriptografija.Classes
             FileManager.WritePublicKeyRSA(ConvertKeyToString(publicKey));
         }
 
-        private static RSAParameters GetPublicKey()
+        public static RSAParameters GetPublicKey()
         {
             string publicKeyString = FileManager.ReadPublicKeyRSA();
             return ConvertKeyStringToRSAParameters(publicKeyString);
         }
 
-        private static RSAParameters GetPrivateKey()
+        public static RSAParameters GetPrivateKey()
         {
             string privateKeyString = FileManager.ReadPrivateKeyRSA();
             return ConvertKeyStringToRSAParameters(privateKeyString);

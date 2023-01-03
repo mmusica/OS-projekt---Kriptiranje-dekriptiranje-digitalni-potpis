@@ -116,6 +116,8 @@
     <Content Include="Datoteke\javni_kljuc.txt" />
     <Content Include="Datoteke\plain_text.txt" />
     <Content Include="Datoteke\privatni_kljuc.txt" />
+    <Content Include="Datoteke\signed_hash.txt" />
+    <Content Include="Datoteke\tajni_kljuc.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

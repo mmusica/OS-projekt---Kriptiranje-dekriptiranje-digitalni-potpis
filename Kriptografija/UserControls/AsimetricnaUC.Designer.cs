@@ -104,6 +104,7 @@
             this.richTextBoxPlainText.Size = new System.Drawing.Size(904, 455);
             this.richTextBoxPlainText.TabIndex = 11;
             this.richTextBoxPlainText.Text = "Text to encrypt...";
+            this.richTextBoxPlainText.TextChanged += new System.EventHandler(this.richTextBoxPlainText_TextChanged);
             // 
             // buttonEncyrpt
             // 
@@ -133,6 +134,7 @@
             this.Controls.Add(this.label1);
             this.Name = "AsimetricnaUC";
             this.Size = new System.Drawing.Size(1069, 648);
+            this.Load += new System.EventHandler(this.AsimetricnaUC_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
