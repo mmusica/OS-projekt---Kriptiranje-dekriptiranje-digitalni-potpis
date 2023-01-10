@@ -46,6 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\AsymmetricCryptography.cs" />
+    <Compile Include="Classes\DigitalSignature.cs" />
+    <Compile Include="Classes\FileManager.cs" />
+    <Compile Include="Classes\Hash.cs" />
+    <Compile Include="Classes\SymmetricCryptography.cs" />
     <Compile Include="KriptoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,9 +111,19 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Classes\" />
-    <Folder Include="Datoteke\" />
+    <Content Include="Datoteke\aes_decrypted_text.txt" />
+    <Content Include="Datoteke\aes_encrypted_text.txt" />
+    <Content Include="Datoteke\default_text.txt" />
+    <Content Include="Datoteke\hash.txt" />
+    <Content Include="Datoteke\javni_kljuc.txt" />
+    <Content Include="Datoteke\plain_text.txt" />
+    <Content Include="Datoteke\privatni_kljuc.txt" />
+    <Content Include="Datoteke\rsa_decrypted_text.txt" />
+    <Content Include="Datoteke\rsa_encrypted_text.txt" />
+    <Content Include="Datoteke\signed_hash.txt" />
+    <Content Include="Datoteke\tajni_kljuc.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
